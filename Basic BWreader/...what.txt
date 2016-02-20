@@ -1,0 +1,14 @@
+﻿Using Pygame
+Strictly transform white into ─, 
+ltgray into light block,
+gray into gray block,
+dkgray into strong block,
+black into full block.
+
+Half pixels will be halved depending on which one is white for now
+
+Image must have only those 4 colors,
+otherwise # will be used.
+
+
+Transparent cases are not very better (it uses # instead of black outlines)
