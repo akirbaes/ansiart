@@ -1,6 +1,6 @@
 # ansiart
 Collection of ansi-color ascii-art tools and creations
-(using Colorama!)
+(using Pygame and Colorama!)
 
 	terminal_reader.py
 terminal-reader asks for a file and transform it into
