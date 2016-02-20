@@ -110,7 +110,7 @@ class Charamatrix(object):
             """if(self.get(x,y)!=data):
                 self.dirty.append((x,y))
                 self.matrix[x][y]=data"""
-            self.matrix[x][y]=data
+            self.matrix[int(x)][int(y)]=data
                 
     def put(self, *data):
         self.set(*data)
@@ -216,7 +216,7 @@ class Charamatrix(object):
     def get(self,x,y):
         """Get given position's infos (tuple). Otherwise None. Do not use outside?"""
         if(self.inside(x,y)):
-            return self.matrix[x][y]
+            return self.matrix[int(x)][int(y)]
         else:
             return ("",Charamatrix.BLACK,Charamatrix.WHITE)
         

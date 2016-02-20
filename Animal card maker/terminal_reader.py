@@ -19,7 +19,10 @@ def transform(filename):
             color2 = color2.r, color2.g, color2.b
             
             CHAR, CBG,CFG = nearest_detector.decide(color1, color2)
-            matrix.set(i,j,unicode(CHAR,"utf-8"),CBG,CFG)
+            try:
+                matrix.set(i,j,unicode(CHAR,"utf-8"),CBG,CFG)
+            except NameError:
+                matrix.set(i,j,CHAR,CBG,CFG)
     return matrix
 
 if(__name__ == "__main__"):
