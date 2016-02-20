@@ -308,7 +308,7 @@ class Charamatrix(object):
         If no name is given, saves in a newfile_[current_epoch_second].txt"""
         if(filename==None):
             filename = "newfile_"+str(int(time()))+".txt"
-        textfile = codecs.open(filename,"w","utf-8")
+        textfile = codecs.open(filename,"w",encoding="utf-8")
         textfile.write(self.export_ansi())
         textfile.close()
         
@@ -317,7 +317,7 @@ class Charamatrix(object):
         If no name is given, saves in a newdata_[current_epoch_second].aas"""
         if(filename==None):
             filename = "newdata_"+str(int(time()))+".aas"
-        textfile = codecs.open(filename,"w","utf-8")
+        textfile = codecs.open(filename,"w",encoding="utf-8")
         textfile.write(self.export_data())
         textfile.close()
         
@@ -326,7 +326,7 @@ class Charamatrix(object):
         vertical is for compatibility with old version"""
         if(filename==None):
             raise Exception("No file name given!")
-        save=codecs.open(filename,"r","utf-8")
+        save=codecs.open(filename,"r",encoding="utf-8")
         mydata = list(u""+save.read())
         save.close()
         w,h = ord(mydata.pop(0)), ord(mydata.pop(0))

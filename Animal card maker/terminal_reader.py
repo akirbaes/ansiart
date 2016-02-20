@@ -27,7 +27,10 @@ def transform(filename):
 
 if(__name__ == "__main__"):
     print("What file do you want to load?")
-    filename=str(raw_input()) #l'image doit être à côté, mettez l'extension dedans
+    try:
+        filename=str(raw_input()) #l'image doit être à côté, mettez l'extension dedans
+    except NameError:
+        filename=str(input())
     
     matrix=transform(filename)
     print(matrix.export_ansi())
