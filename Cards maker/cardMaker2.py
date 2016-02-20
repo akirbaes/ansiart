@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from Charamatrix import Charamatrix
+import colorama
+colorama.init()
 
 card = Charamatrix().load_data("CARD_FRONT.aas")
 coeur = Charamatrix().load_data("petit_coeur.aas")
@@ -22,7 +24,8 @@ image_width = 16
 card_height = 14 #+1 +1
 image_height = 12
 
-knots=u"♥♦♣♠"
+#knots="♥♦♣♠"
+knots=b'\x03\x04\x05\x06'.decode("utf-8") #this works!!!
 fgcolors=[Charamatrix.RED,Charamatrix.RED,Charamatrix.BLACK,Charamatrix.BLACK]
 bgcolor=Charamatrix.WHITE
 red=Charamatrix.RED
@@ -160,4 +163,8 @@ for c in range(4):
 	for i in range(len(river)):
 		screen.paste((i+10*c)%4*w,(i+10*c)//4*h,river[i])
 		river[i].save_data(".export_"+noms[c]+"_"+str(i+1)+".aas")
-print(screen.export_ansi())
+toprint=screen.export_ansi()
+print(toprint)
+#.encode("utf-8") or sys.getdefaultencoding()) will turn it into code (with slashes) ---> called on "string" and internal stuff
+#.decode("utf-8") will turn it into decyferable thing (into string), from an encoded source
+#somehow the export was not using the right representation of triangles... To check. Why  works but not ▲?
