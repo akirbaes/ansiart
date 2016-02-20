@@ -1,0 +1,7 @@
+Using Pygame
+Try to use more or less full blocks to color this thing
+Works best with grayscale... only 4 scales.
+
+The algorithm detecting the nearest tone could use some work
+
+Transparent cases are weird??? Do not use transparency. Use white instead.
