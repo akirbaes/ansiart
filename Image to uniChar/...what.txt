@@ -1,0 +1,6 @@
+This one ises PIL so Python2
+
+	i2char2.py
+Will ask for an image. I'm trying to guess which character to use by comparing to the ones in base.png
+The characters used are box and triangles. It's better on big black-and-white images.
+The most pixels in common, the most it's the one.
