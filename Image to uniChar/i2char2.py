@@ -99,7 +99,6 @@ def afficher(matrice):
 	return ans
 
 ans=afficher(final)
-print(ans)
 outfile=codecs.open(imageName+".output.txt","w",encoding="utf-8")
 outfile.write(ans)
-        
+print(ans)
