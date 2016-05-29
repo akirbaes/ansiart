@@ -2,29 +2,29 @@
 Collection of ansi-color ascii-art tools and creations
 (using Pygame and Colorama!)
 
-####terminal_reader.py
+###terminal_reader.py
 terminal-reader asks for a file and transform it into
 a .txt and a .aas (ansi art save)  
 Can also be called by another python file
 
-####nearest_detector.py
+###nearest_detector.py
 nearest_detector is the one doing the transformation  
 it calls Pygame  
 it is called in terminal_reader for example  
 It transforms an image with colored ▄▀█▓▒░ but it has problems with shades (I should do some research about merging and comparing two colors).  
 
-####charamatrix.py
+###charamatrix.py
 Charamatrix is the class containing the informations.  
 It can do exporting .txt/.aas and loading .aas
 
-####lists.names.py
+###lists.names.py
 An example on how to use it with multiple images.  
 Please edit before using, as the file names are hard-coded.  
 
 ####Other folders:
 
 ###Animal card maker
-Takes the card base and inserts 16*16 animal and foods pngs in it to make an **ANSIART** card.  
+Takes the card base and inserts 16x16 animal and foods pngs in it to make an **ANSIART** card.  
 (Can insert name or not)  
 Using nearest_detector.py  (colored ▄▀█▓▒░) + characters for the name
 
